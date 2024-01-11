@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>JavaScript PT III Exercises </title>
+</head>
+<body>
+  <script>
+    alert('You can call these functions in the console:\n\nadd7() - adds 7 to the number\nmultiply() - multiplies the numbers\ncapitalize() - capitalizes the first letter of the word\nlastLetter() - gets the last letter of the word');
+
+    function add7(n) {
+      n = +prompt('Type a number:');
+      result = n+7;
+      return n+7;
+    }
+    
+    function multiply(n1,n2) {
+      n1 = +prompt('First Number:');
+      n2 = +prompt('Second Number:');
+      return n1*n2;
+    }
+
+    function capitalize(string) {
+      string = prompt('Type a word:');
+      firstLetter = string.charAt(0);
+      otherLetters = string.slice(1);
+      return firstLetter.toUpperCase() + otherLetters.toLowerCase();
+    }
+
+    function lastLetter(string) {
+      string =  prompt('Type a word:');
+      return string.slice(-1);
+    }
+  </script>
+</body>
+</html>
