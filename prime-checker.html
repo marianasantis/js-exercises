@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Checker</title>
+</head>
+<body>
+  <h1>Prime Checker!</h1>
+  <script> 
+
+    const number = +prompt('Enter a number:');
+
+    alert(`Primes from 1 to ${number}:  ${checkIfPrime(number)}`);
+
+    function checkIfPrime(finalNumber) {
+
+      const primes = [];
+      
+      nextNumber:
+      for (let currentNumber = 2; currentNumber <= finalNumber; currentNumber++) {
+
+        for (let divisor = 2; divisor < currentNumber; divisor++) { 
+
+          if (currentNumber%divisor === 0) continue nextNumber;
+        } // this block checks if currentNumber is divisible by any number other than itself 
+
+        primes.push(currentNumber); // if not divisible, it's a prime!  
+      }
+
+    return primes;
+    }
+  </script>
+</body>
+</html> 
